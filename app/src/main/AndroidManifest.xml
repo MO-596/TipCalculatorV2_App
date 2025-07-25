@@ -18,8 +18,8 @@
         android:theme="@style/AppTheme"
         tools:targetApi="36">
         <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-7318525606558822~1579344397"/>
+            android:name="[uses your own]"
+            android:value="[uses your own]"/>
 
         <activity
             android:name=".MainActivity"
