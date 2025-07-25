@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    tools:ignore="NamespaceTypo,RedundantNamespace"
+    >
+
+
+<!--First Row-->
+    <TextView
+        android:id="@+id/tvBillLabel"
+        style="@style/LabelStyle"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:text="@string/Label_Bill"
+        android:textColor="@color/black"
+
+        app:layout_constraintBottom_toTopOf="@id/tvTipLabel"
+        app:layout_constraintEnd_toStartOf="@id/etNDAmtBill"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNDAmtBill"
+        style="@style/InputStyle"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+
+        android:autofillHints=""
+        android:ems="7"
+        android:hint="@string/amount_bill_hint"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/Grey"
+        android:singleLine="true"
+        android:ellipsize="end"
+
+        app:layout_constraintBaseline_toBaselineOf="@id/tvBillLabel"
+        app:layout_constraintBottom_toTopOf="@id/etTipNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvBillLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--Second Row-->
+    <TextView
+        android:id="@+id/tvTipLabel"
+        style="@style/LabelStyle"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:text="@string/Top_Label_tip"
+        android:textColor="@color/black"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/etTipNumber"
+        app:layout_constraintBottom_toTopOf="@id/tvPeopleLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvBillLabel" />
+
+    <EditText
+        android:id="@+id/etTipNumber"
+        style="@style/InputStyle"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+
+        android:autofillHints=""
+        android:ems="7"
+        android:hint="@string/amount_tip_hint"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/Grey"
+        android:singleLine="true"
+        android:ellipsize="end"
+
+        app:layout_constraintBaseline_toBaselineOf="@id/tvTipLabel"
+        app:layout_constraintStart_toEndOf="@id/tvTipLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/etPeopleNumber"
+        app:layout_constraintTop_toBottomOf="@id/etNDAmtBill" />
+    <!--Third Row-->
+
+    <TextView
+        android:id="@+id/tvPeopleLabel"
+        style="@style/LabelStyle"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:text="@string/Label_People"
+        android:textColor="@color/black"
+
+        app:layout_constraintBottom_toTopOf="@id/RedLine"
+        app:layout_constraintEnd_toStartOf="@id/etPeopleNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTipLabel" />
+
+    <EditText
+        android:id="@+id/etPeopleNumber"
+        style="@style/InputStyle"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+
+        android:autofillHints=""
+        android:ems="7"
+        android:inputType="number"
+        android:hint="@string/People_hint"
+        android:textColorHint="@color/Grey"
+        android:singleLine="true"
+        android:ellipsize="end"
+
+        app:layout_constraintBaseline_toBaselineOf="@id/tvPeopleLabel"
+        app:layout_constraintBottom_toTopOf="@id/RedLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvPeopleLabel"
+        app:layout_constraintTop_toBottomOf="@id/etTipNumber" />
+
+    <!--Fourth Row-->
+    <View
+        android:id="@+id/RedLine"
+        android:layout_width="0dp"
+        android:layout_height="5dip"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+
+        android:background="@color/red"
+
+        app:layout_constraintBottom_toTopOf="@id/tvTipAmtLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPeopleLabel" />
+
+    <!--Fifth Row-->
+    <TextView
+        android:id="@+id/tvTipAmtLabel"
+        style="@style/LabelStyle"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:text="@string/Label_Tip"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvTipAmt"
+        app:layout_constraintBottom_toTopOf="@id/tvTotalLabel"
+        app:layout_constraintTop_toBottomOf="@id/RedLine" />
+
+    <TextView
+        android:id="@+id/tvTipAmt"
+        style="@style/OutputStyle"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+
+        app:layout_constraintTop_toBottomOf="@id/RedLine"
+        app:layout_constraintStart_toEndOf="@id/tvTipAmtLabel"
+        app:layout_constraintBottom_toTopOf="@id/tvTotalAmt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvTipAmtLabel"/>
+
+    <!--Sixth Row-->
+    <TextView
+        android:id="@+id/tvTotalLabel"
+        style="@style/LabelStyle"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:text="@string/Bill_Total"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvTotalAmt"
+        app:layout_constraintBottom_toTopOf="@id/tvTipPerPersonLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvTipAmtLabel"/>
+
+    <TextView
+        android:id="@+id/tvTotalAmt"
+        style="@style/OutputStyle"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+
+        app:layout_constraintTop_toBottomOf="@id/tvTipAmt"
+        app:layout_constraintStart_toEndOf="@id/tvTotalLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvTipPerPersonDisplay"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvTotalLabel"/>
+
+    <!--Seventh Row-->
+    <TextView
+        android:id="@+id/tvTipPerPersonLabel"
+        style="@style/LabelStyle"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:text="@string/tip_per_person"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvTipPerPersonDisplay"
+        app:layout_constraintTop_toBottomOf="@id/tvTotalLabel"
+        app:layout_constraintBottom_toTopOf="@id/tvBillEachLabel" />
+
+    <TextView
+        android:id="@+id/tvTipPerPersonDisplay"
+        style="@style/OutputStyle"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+
+        app:layout_constraintTop_toBottomOf="@id/tvTotalAmt"
+        app:layout_constraintBottom_toTopOf="@id/tvBillEachDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvTipPerPersonLabel"/>
+
+    <!--Eighth Row-->
+    <TextView
+        android:id="@+id/tvBillEachLabel"
+        style="@style/LabelStyle"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:text="@string/Bill_per_person"
+
+        app:layout_constraintEnd_toStartOf="@id/tvBillEachDisplay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTipPerPersonLabel"
+        app:layout_constraintBottom_toTopOf="@id/tvPeopleTotalLabel" />
+
+    <TextView
+        android:id="@+id/tvBillEachDisplay"
+        style="@style/OutputStyle"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvBillEachLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvTipPerPersonDisplay"
+        app:layout_constraintBottom_toTopOf="@id/tvPeopleCalTotal" />
+
+<!-- Ninth Row-->
+    <TextView
+        android:id="@+id/tvPeopleTotalLabel"
+        style="@style/LabelStyle"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+
+        android:text="@string/total_per_person"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvPeopleCalTotal"
+        app:layout_constraintTop_toBottomOf="@id/tvBillEachLabel"
+        app:layout_constraintBottom_toTopOf="@id/adView"/>
+
+    <TextView
+        android:id="@+id/tvPeopleCalTotal"
+        style="@style/OutputStyle"
+
+        android:layout_width="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+
+
+        app:layout_constraintBaseline_toBaselineOf="@id/tvPeopleTotalLabel"
+        app:layout_constraintBottom_toTopOf="@id/adView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvPeopleTotalLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvBillEachDisplay" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-7318525606558822/9951878189"
+
+        app:layout_constraintTop_toBottomOf="@id/tvPeopleTotalLabel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

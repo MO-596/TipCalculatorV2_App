@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Tip It!</string>
+<!--    my coworker dessire help with coming up with the name-->
+
+    <string name="Label_Bill">Bill ($)</string>
+    <string name="amount_bill_hint">Enter Bill Total</string>
+
+    <string name="Top_Label_tip">Tip (%)</string>
+    <string name="Label_Tip">Tip ($)</string>
+    <string name="amount_tip_hint">Enter Tip</string>
+
+    <string name="tip_amount">Total</string>
+    <string name="Bill_Total">Total</string>
+
+    <string name="line_description">This is a colored line to separate the top ui elements with the bottom ones9</string>
+
+    <string name="Label_People">People</string>
+    <string name="People_hint">Enter Number</string>
+    <string name="total_per_person">Total Each</string>
+    <string name="tip_per_person">Tip Each</string>
+
+    <string name="Bill_per_person">Bill Each</string>
+
+    <string name="calculate_total">Calculate</string>
+</resources>

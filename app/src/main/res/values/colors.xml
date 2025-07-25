@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--this is the theme-->
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="black">#0C0C0C</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Light_Grey">#C4BEBE</color>
+    <color name="light_Purple">#D05CE3</color>
+    <color name="darkGreen">#068F0B</color>
+    <color name="darkBlue">#F00F</color>
+    <color name="Green">#A8EFAB</color>
+    <color name="Grey">#565657</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#2196F3</color>
+
+</resources>
