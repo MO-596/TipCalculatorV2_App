@@ -323,7 +323,7 @@
         android:layout_height="wrap_content"
 
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-7318525606558822/9951878189"
+        ads:adUnitId="[your own unit id"
 
         app:layout_constraintTop_toBottomOf="@id/tvPeopleTotalLabel"
         app:layout_constraintBottom_toBottomOf="parent"
